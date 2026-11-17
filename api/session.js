@@ -1,0 +1,1 @@
+const {valid,allow}=require('../lib/auth');module.exports=(req,res)=>{allow(res,['GET']);if(req.method!=='GET')return res.status(405).end();return res.status(200).json({ok:valid(req)})}
