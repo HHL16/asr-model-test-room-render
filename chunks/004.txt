@@ -1,0 +1,5 @@
+395ac;font-size:12px;padding:22px}.mini{font-size:13px;color:var(--muted)}.rowgap{margin-top:13px}.badge{font-size:12px;border-radius:40px;padding:5px 9px;background:#e6f5ff;color:#075aa5;font-weight:700}
+@media(max-width:760px){.head{padding:16px}.brand{font-size:16px}.container{margin:12px auto;padding:0 10px 25px}.card{padding:16px}.login{margin:30px auto}.grid,.modelgrid{grid-template-columns:1fr}.h2{font-size:19px}.model textarea{min-height:105px}}
+</style></head><body>
+<header class="head"><div><div class="brand">◉ ASR 模型比較測試包廂</div><div class="sub">Taiwan Tongues ASR v1 × Whisper Large v2 / v3</div></div><span class="pill">小組測試版</span></header>
+<main class="container"><section id="login" class="card login"><div class="lock">♙</div><h1>歡迎進入測試包廂</h1><p class="muted">只要輸入共用密碼，就
