@@ -1,0 +1,6 @@
+能進入小組比較平台，不需要註冊帳號。</p><form id="loginForm"><div class="label">包廂密碼</div><input id="password" type="password" autocomplete="current-password" placeholder="請輸入共用密碼" required><div style="height:14px"></div><button id="loginButton" class="btn" style="width:100%">進入測試</button><div id="loginError" class="smallerr" role="alert"></div></form></section>
+<section id="app" class="hidden">
+<div class="row" style="margin-bottom:18px"><div><h1 class="h2">模型比較工作台</h1><div class="muted">同一段錄音，同步整理三個模型的結果與錯誤率</div></div><button id="logout" class="btn outline">登出</button></div>
+<div class="status" id="serverStatus">正在確認模型運算服務…</div>
+<div class="grid">
+<div class="card"><h2 class="h3">① 上傳錄音</h2><div class="drop
