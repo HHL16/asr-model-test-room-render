@@ -1,0 +1,4 @@
+e(e.target.files[0]);$('drop').ondragover=e=>e.preventDefault();$('drop').ondrop=e=>{e.preventDefault();setFile(e.dataTransfer.files[0])};
+$('recognize').onclick=()=>alert('尚未設定真正的 ASR 推論主機，不能辨識。');
+function norm(s){return(s||'').normalize('NFKC').toLocaleLowerCase()}function chr(s){return Array.from(norm(s)).filter(c=>!(/[\s\p{P}\p{S}]/u).test(c))}function wd(s){let st=norm(s).replace(/[\p{P}\p{S}]/gu,' ');try{return Array.from(new Intl.Segmenter('zh',{granularity:'word'}).segment(st)).filter(p=>p.isWordLike).map(p=>p.segment)}catch(e){return st.split(/\s+/).filter(Boolean)}}
+function distance(a,b){let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let curr=[i];for(let j=1;j<=b.length;j++)curr.push(Math.min(curr[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1)));prev=curr}return prev[b.
