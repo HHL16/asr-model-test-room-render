@@ -1,0 +1,1 @@
+(()=>{const copy='比較不同語音辨識模型的轉錄品質、辨識效能與錯誤率';for(const el of document.querySelectorAll('p,small,div,span')){if(el.children.length)continue;const s=(el.textContent||'').trim();if(/Taiwan Tongues ASR v1\s*[×xX]\s*Whisper Large v2\s*\/\s*v3/i.test(s)||/Taiwan Tongues ASR v1.*Whisper Large v2.*v3/i.test(s))el.textContent=copy}})();
