@@ -1,0 +1,7 @@
+。需有人工作為對照的正確逐字稿。中文 WER 採瀏覽器斷詞，僅供初步比較。</p></div>
+</div></section></main><div class="foot">小組試用網站｜登入密碼不公開顯示｜本頁不使用任何模擬模型辨識結果</div>
+<script>
+const $=id=>document.getElementById(id);
+let currentFile=null,modelReady=false,recordedSeconds=['—','—','—'];
+async function session(){try{let res=await fetch('/api/session',{cache:'no-store'});let data=await res.json();$('login').classList.toggle('hidden',!!data.ok);$('app').classList.toggle('hidden',!data.ok);if(data.ok)status()}catch(e){$('loginError').textContent='連線失敗，請稍後重新整理'}}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();$('loginError').textContent='';$('loginButton').disabled=true;try{let r=await fetch('/api/auth',{method:'POS
