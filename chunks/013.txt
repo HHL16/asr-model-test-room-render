@@ -1,0 +1,5 @@
+length]}
+function err(a,b,fn){let ref=fn(a),hyp=fn(b);return ref.length?(100*distance(ref,hyp)/ref.length).toFixed(2)+'%':'—'}
+const names=['Taiwan Tongues ASR v1','Whisper Large v2','Whisper Large v3'];function rows(){let ref=$('reference').value;return names.map((name,i)=>{let hyp=$('model'+i).value;return[name,ref,hyp,ref.trim()&&hyp.trim()?err(ref,hyp,chr):'—',ref.trim()&&hyp.trim()?err(ref,hyp,wd):'—',recordedSeconds[i]]})}
+$('calculate').onclick=()=>{let all=rows();let tb=$('results');tb.replaceChildren();all.forEach(a=>{let tr=document.createElement('tr');[a[0],a[3],a[4],a[5]].forEach(v=>{let td=document.createElement('td');td.textContent=v;tr.append(td)});tb.append(tr)});$('resultNotice').textContent=$('reference').value.trim()?'已計算可用的模型比較數據。':'尚未輸入人工正確逐字稿。'};
+$('download').onclick=()=
