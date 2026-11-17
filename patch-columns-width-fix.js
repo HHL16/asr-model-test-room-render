@@ -1,0 +1,6 @@
+(()=>{'use strict';const app=document.getElementById('app'),layout=app?.querySelector('.asr-steps-123'),grid=app?.querySelector('.grid');if(!layout||!grid){console.error('Full-width layout: missing layout/grid');return}if(grid.contains(layout)){grid.before(layout)}const style=document.createElement('style');style.textContent=`
+#app>.asr-steps-123,.asr-steps-123{width:100%!important;max-width:none!important;min-width:0!important;box-sizing:border-box!important;display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;gap:22px!important;align-items:start!important}
+.asr-steps-123 .asr-step1-panel,.asr-steps-123 .asr-step2-panel,.asr-steps-123 .asr-step3-panel{min-width:0!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+.asr-steps-123 .asr-steps-right{min-width:0!important;width:100%!important}
+@media(max-width:980px){.asr-steps-123{grid-template-columns:minmax(0,1fr)!important}}
+`;document.head.append(style);const steps=[...layout.querySelectorAll('[data-step]')].map(x=>x.dataset.step);const rect=layout.getBoundingClientRect();console.info('Full-width STEP1-3 layout',{steps,width:Math.round(rect.width),gridParent:layout.parentElement?.className});})();
