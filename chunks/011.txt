@@ -1,0 +1,3 @@
+modelReady||!currentFile;$('runNote').textContent=modelReady?'選擇音檔後即可開始比較。':'尚未接通推論服務，辨識按鈕暫不開放；不會出現虛構的模型輸出。'}catch(e){$('serverStatus').textContent='模型服務連線檢查失敗。'}}
+function setFile(f){if(!f)return;if(f.size>40*1024*1024){alert('超過 40MB 限制');return}currentFile=null;$('player').src=URL.createObjectURL(f);$('player').style.display='block';$('fileLabel').textContent=f.name+' · '+(f.size/1048576).toFixed(2)+' MB';$('player').onloadedmetadata=()=>{if(Number.isFinite($('player').duration)&&$('player').duration>300){$('fileLabel').textContent='檔案超過五分鐘限制';$('player').style.display='none';alert('請選擇五分鐘內錄音')}else{currentFile=f}$('recognize').disabled=!modelReady||!currentFile}}
+$('audiofile').onchange=e=>setFil
